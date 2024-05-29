@@ -19,7 +19,7 @@ import { Logo } from '@/components/logo'
 import { UserDropDown } from './user-dropdown'
 
 type Props = {
-  user: Session['user']
+  user?: Session['user']
 }
 
 export function MainSidebar({ user }: Props) {

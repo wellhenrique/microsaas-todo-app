@@ -4,7 +4,7 @@ import { z } from 'zod'
 
 import { auth } from '@/services/auth'
 import { prisma } from '@/services/database'
-import { deleteTodoSchema, upsertTodoSchema } from './_components/schema'
+import { deleteTodoSchema, upsertTodoSchema } from './schema'
 
 export async function getUserTodos() {
   const session = await auth()

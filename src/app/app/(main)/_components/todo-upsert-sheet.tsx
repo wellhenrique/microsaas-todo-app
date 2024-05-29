@@ -27,7 +27,7 @@ import {
 } from '@/components/ui/form'
 
 import { upsertTodo } from '../actions'
-import { upsertTodoSchema } from './schema'
+import { upsertTodoSchema } from '../schema'
 
 import { Todo } from '../types'
 import { toast } from '@/components/ui/use-toast'
