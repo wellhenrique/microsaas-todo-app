@@ -68,7 +68,7 @@ export function ProfileForm({ defaultValues }: Props) {
           <CardHeader>
             <CardTitle>Name</CardTitle>
             <CardDescription>
-              This will be the name displayed on your profile.
+              Este será o nome exibido no seu perfil.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -77,9 +77,9 @@ export function ProfileForm({ defaultValues }: Props) {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Nome</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter your name here" {...field} />
+                    <Input placeholder="Digite seu nome aqui" {...field} />
                   </FormControl>
 
                   <FormMessage />
@@ -93,8 +93,8 @@ export function ProfileForm({ defaultValues }: Props) {
           <CardHeader>
             <CardTitle>Email</CardTitle>
             <CardDescription>
-              Please contact email contact@todoapp.com to change the email
-              associated with your account.
+              Entre em contato com email contato@todoapp.com para alterar o
+              email associado à sua conta.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -107,7 +107,7 @@ export function ProfileForm({ defaultValues }: Props) {
                   <FormControl>
                     <Input
                       readOnly
-                      placeholder="Enter your email"
+                      placeholder="Digite seu email"
                       className="cursor-not-allowed opacity-50"
                       {...field}
                     />
@@ -121,7 +121,7 @@ export function ProfileForm({ defaultValues }: Props) {
 
         <SheetFooter className="mt-auto">
           <Button type="submit" disabled={isSubmitting}>
-            <span>Save Changes</span>
+            <span>Salvar Alterações</span>
             {isSubmitting && <Spinner className="fill-primary" />}
           </Button>
         </SheetFooter>

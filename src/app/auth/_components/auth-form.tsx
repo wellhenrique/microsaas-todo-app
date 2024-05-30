@@ -23,13 +23,13 @@ export function AuthForm() {
       await signIn('nodemailer', { email: data.email, redirect: false })
 
       toast({
-        title: 'Magic Link Sent',
-        description: 'Check your email for the magic link to login',
+        title: 'Magic Link Enviado',
+        description: 'Clique no link mágico enviado no seu email para entrar',
       })
     } catch (error) {
       toast({
-        title: 'Error',
-        description: 'An error occurred. Please try again.',
+        title: 'Erro',
+        description: 'Ocorreu um erro. Por favor, tente novamente.',
       })
     } finally {
       setIsSubmitting(false)
@@ -41,10 +41,10 @@ export function AuthForm() {
       <div className="mx-auto w-full max-w-md space-y-4 rounded-lg dark bg-white p-8 shadow-lg dark:bg-gray-900">
         <div className="space-y-2 text-center">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-            Welcome Back
+            Bem-vindo de volta
           </h1>
           <p className="dark:text-gray-500 text-gray-800">
-            Sign in to your account using a magic link sent to your email.
+            Entre em sua conta usando um link mágico enviado no seu email.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export function AuthForm() {
             </Label>
             <Input
               id="email"
-              placeholder="Enter your email"
+              placeholder="Digite seu email"
               required
               type="email"
               {...form.register('email')}
@@ -66,13 +66,13 @@ export function AuthForm() {
             disabled={isSubmitting}
             type="submit"
           >
-            <span>Sign In</span>
+            <span>Entrar</span>
             {isSubmitting && <Spinner className="fill-primary" />}
           </Button>
         </form>
         <div className="text-center text-sm text-gray-500 dark:text-gray-400">
           <Link className="underline underline-offset-2" href="#">
-            Resend magic link
+            Reenviar link mágico
           </Link>
         </div>
       </div>
