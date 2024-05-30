@@ -20,18 +20,24 @@ model Todo {
 }
 
 model User {
-  id            String          @id @default(cuid())
+  id            String    @id @default(cuid())
   name          String?
-  email         String?         @unique
-  emailVerified DateTime?
+  email         String?   @unique
   image         String?
+  emailVerified DateTime?
+
+  stripePriceId            String?
+  stripeCustomerId         String?
+  stripeSubscriptionId     String?
+  stripeSubscriptionStatus String?
+
+  Todo          Todo[]
   accounts      Account[]
   sessions      Session[]
   Authenticator Authenticator[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  Todo      Todo[]
 }
 
 model Account {
